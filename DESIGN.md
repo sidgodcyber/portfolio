@@ -79,6 +79,7 @@ python tools/build-art.py <astronaut-colour.png> <astronaut-bw.png>
 | Trishul Net | Siddhi's `p1_stalta_trigger.png` | Real Illgraben debris-flow recording and its STA/LTA trigger, redrawn in two inks. |
 | Lunar Ice | Siddhi's D2, D3, D4 figures | Her real traverse, CPR, ice-criteria and illumination maps. |
 | Sand Grain | Klepnev specimen photo | Grains segmented and bracketed with OpenCV. An illustration, not project output. |
+| Perihelion | Siddhi's gameplay screenshot | Dithered. |
 | Gravity | A real morning brief | Set as text, an excerpt, client names blacked out. |
 | Exhibits | Siddhi's own DFI shots | Dithered; the original fades in on hover. AgeWarp uses one dot per pixel so her face stays readable, and phones get all five ages as a 3 + 2 grid. |
 | Contact clip | ISS Expedition 29 | Title cards trimmed, then redrawn to 1-bit live in the browser. |
@@ -96,7 +97,7 @@ Credits sit in the footer under "Picture credits" and in `assets/found/credits.j
 | **Home** | From the mock: copy left, astronaut centre, Fig. window right, Moon rising across the foot. Nothing touches the headline. |
 | **About Me** | Poster left, letter centre, orbit drawing right. |
 | **Areas of Exploration** | The whole field turns to paper. Giant heading, filled bar rows. |
-| **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, six of them, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. Phones get plain stacked folders. |
+| **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, seven of them, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. Phones get plain stacked folders. |
 | **Milestones** | A printed sheet at a one-degree tilt. |
 | **Experience** | Text and Anatomy Mirror, then the AgeWarp strip at full width, then three exhibits. |
 | **Résumé** | No section of its own: one link in the contact card, pointing at a fixed file, `assets/resume/Siddhi-Baluja-Resume.pdf`. |

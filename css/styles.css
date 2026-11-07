@@ -158,9 +158,9 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 .projects>h2{font-size:var(--t-head);margin:0 var(--m) 32px}
 .folder{position:sticky;top:var(--bar)}
 .tabline{position:relative;height:var(--tab);margin:0 var(--m);pointer-events:none}
-.tab{position:absolute;bottom:0;left:calc(var(--i)*100%/6);width:calc(100%/6 - 6px);height:100%;display:flex;align-items:center;padding:0 16px;font:400 var(--t-small)/1 var(--pixel);text-decoration:none;white-space:nowrap;pointer-events:auto;clip-path:polygon(0 100%,0 var(--c),var(--s) var(--c),var(--s) var(--s),var(--c) var(--s),var(--c) 0,calc(100% - 24px) 0,calc(100% - 24px) 6px,calc(100% - 18px) 6px,calc(100% - 18px) 12px,calc(100% - 12px) 12px,calc(100% - 12px) 18px,calc(100% - 6px) 18px,calc(100% - 6px) 24px,100% 24px,100% 100%);transition:padding .1s steps(2)}
-.tab:hover{padding-left:22px}
-@media (min-width:1400px){.tab{font-size:var(--t-sub)}}
+.tab{position:absolute;bottom:0;left:calc(var(--i)*100%/7);width:calc(100%/7 - 6px);height:100%;display:flex;align-items:center;padding:0 12px;font:400 var(--t-small)/1 var(--pixel);text-decoration:none;white-space:nowrap;pointer-events:auto;clip-path:polygon(0 100%,0 var(--c),var(--s) var(--c),var(--s) var(--s),var(--c) var(--s),var(--c) 0,calc(100% - 24px) 0,calc(100% - 24px) 6px,calc(100% - 18px) 6px,calc(100% - 18px) 12px,calc(100% - 12px) 12px,calc(100% - 12px) 18px,calc(100% - 6px) 18px,calc(100% - 6px) 24px,100% 24px,100% 100%);transition:padding .1s steps(2)}
+.tab:hover{padding-left:16px}
+@media (min-width:1400px){.tab{font-size:var(--t-body)}}
 .folder.tone .tab{background:var(--tone-2);color:var(--bone)}
 .folder.paper .tab{background:var(--bone);color:var(--ground)}
 .folder-body{min-height:calc(100svh - var(--bar) - var(--tab));display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:16px;align-content:center;align-items:center;padding:clamp(24px,4vh,48px) var(--m)}

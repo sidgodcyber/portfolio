@@ -337,6 +337,7 @@ def clip():
 def main():
     clip()
     plate(FOUND / "aurora-iss.webp", "ionwatch.png", lo=0.05, hi=0.8, gamma=1.05)
+    plate(OWN / "perihelion.jpg", "perihelion.png", cx=0.56, lo=0.05, hi=0.6, gamma=0.8)
     gnss()
     trishul()
     lunar()

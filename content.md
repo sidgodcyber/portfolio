@@ -36,6 +36,7 @@ science, technology and engineering.
 - Lunar South-Pole Ice Detection (Space Technology · Geospatial · Research): Water-ice detection and mission planning for crater F2 near the lunar south pole, built from NASA LOLA topography and Chandrayaan-2 DFSAR radar. Built on: a five-stage Python pipeline over about 50 GB of mission data. Built for: Bharatiya Antariksh Hackathon 2026.
 - Sand Grain Mapping System (Computer Vision · Edge AI · Earth Sciences): A low-cost camera-based system for sand grain mapping and analysis, developed for the Smart India Hackathon 2025. Built on: Raspberry Pi 5, Pi Camera, 3D-printed casing. Result: SIH 2025 Top 5 Finalist, Ministry of Earth Sciences.
 - Gravity (AI · Systems · Personal Tools): A personal assistant system that remembers my working day. Gravity records what I do, sorts what I tell it into tasks, notes and client records, and writes me a morning brief. It runs across two machines with encrypted sync, so both share one memory.
+- Perihelion: The Last Trajectory (Web Game · 3D · Sci-Fi): A cinematic space-survival game built for a game jam on the theme LOOP. Fly the research spacecraft Kestrel through three hostile sectors, manage your fuel and hull, and follow a repeating signal to its source. Built for: the browser, in HTML5. Status: playable prototype. Play it: https://sidgodcyber.itch.io/perihelion-the-last-trajectory
 
 ### Milestones
 - 2026, IDE Bootcamp Winner: Winner, Best Performing Team and Pitch Excellence Award for IonWatch.
