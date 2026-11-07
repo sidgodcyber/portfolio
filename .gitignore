@@ -1,0 +1,6 @@
+.vercel
+.mcp.json
+.next
+node_modules
+.taste-skill/
+*.code-workspace
