@@ -274,21 +274,11 @@ def lunar():
 
 
 def agewarp():
-    """The result strip only, as a plate and as the original that shows on hover."""
+    """The result strip only. It sits small on the page, so no colour original."""
     strip = Image.open(OWN / "agewarp.jpg").convert("RGB").crop((52, 146, 1404, 402))
-    strip.save(OUT / "agewarp-strip.jpg", quality=88)
     # one dither dot per pixel: at the coarser size faces lose too much
     g = levels(to_gray(strip), 0.02, 0.95, 0.78)
     save_bits(atkinson(g), "agewarp.png", px=1)
-    # phones: all five ages at once, three over two
-    cell_w, cell_h, pitch, gap = 266, 256, 271, 10
-    grid = np.zeros((cell_h * 2 + gap, cell_w * 3 + gap * 2), np.float32)
-    for i in range(5):
-        x, y = (i % 3) * (cell_w + gap), (i // 3) * (cell_h + gap)
-        if i >= 3:
-            x += (cell_w + gap) // 2
-        grid[y : y + cell_h, x : x + cell_w] = g[:, i * pitch : i * pitch + cell_w]
-    save_bits(atkinson(grid), "agewarp-phone.png", px=1)
 
 
 def astronauts(colour_src, bw_src):

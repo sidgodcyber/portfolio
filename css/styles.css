@@ -219,8 +219,10 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 .exhibit.big{grid-column:6/13}
 .exhibit{grid-column:span 4}
 .exhibit:nth-of-type(n+2) .swap{aspect-ratio:8/5}
-.exhibit.wide{grid-column:1/-1}
+/* AgeWarp stays a small detail, its caption beside it */
+.exhibit.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:center}
 .exhibit.wide .swap{aspect-ratio:1352/256}
+.exhibit.wide figcaption{margin-top:0}
 .swap{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--tone)}
 .swap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .swap .real{opacity:0;transition:opacity .28s steps(5)}
@@ -340,8 +342,7 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
   .sheet li{grid-template-columns:3.2em minmax(0,1fr);gap:8px}
   .sheet time{font-size:var(--t-body)}
   .exhibit,.exhibit:last-of-type{grid-column:1/-1}
-  .exhibit.wide .swap{aspect-ratio:818/522}
-  .exhibit.wide .real{display:none}
+  .exhibit.wide{grid-template-columns:minmax(0,1fr);gap:12px}
   .letter{grid-template-columns:1fr}
   .visit{height:auto;display:flex;flex-direction:column;overflow:visible}
   .clip-still{position:relative;inset:auto;height:62svh;flex:none}

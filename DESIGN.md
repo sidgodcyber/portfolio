@@ -81,7 +81,7 @@ python tools/build-art.py <astronaut-colour.png> <astronaut-bw.png>
 | Sand Grain | Klepnev specimen photo | Grains segmented and bracketed with OpenCV. An illustration, not project output. |
 | Perihelion | Siddhi's gameplay screenshot | Dithered. |
 | Gravity | A real morning brief | Set as text, an excerpt, client names blacked out. |
-| Exhibits | Siddhi's own DFI shots | Dithered; the original fades in on hover. AgeWarp uses one dot per pixel so her face stays readable, and phones get all five ages as a 3 + 2 grid. |
+| Exhibits | Siddhi's own DFI shots | Dithered; the original fades in on hover, except AgeWarp, which stays a small dithered strip at her request. |
 | Contact clip | ISS Expedition 29 | Title cards trimmed, then redrawn to 1-bit live in the browser. |
 
 Credits sit in the footer under "Picture credits" and in `assets/found/credits.json`. No found picture is presented as Siddhi's own work.
@@ -99,7 +99,7 @@ Credits sit in the footer under "Picture credits" and in `assets/found/credits.j
 | **Areas of Exploration** | The whole field turns to paper. Giant heading, filled bar rows. |
 | **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, seven of them, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. Phones get plain stacked folders. |
 | **Milestones** | A printed sheet at a one-degree tilt. |
-| **Experience** | Text and Anatomy Mirror, then the AgeWarp strip at full width, then three exhibits. |
+| **Experience** | Text and Anatomy Mirror, then a small AgeWarp strip with its caption beside it, then three exhibits. |
 | **Résumé** | No section of its own: one link in the contact card, pointing at a fixed file, `assets/resume/Siddhi-Baluja-Resume.pdf`. |
 | **Beyond Technology** | A note on paper with a tipped-in plate and a perforated foot. |
 | **Contact** | The largest type on the page, then the aurora clip with a visit card on it. |
