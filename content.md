@@ -41,7 +41,9 @@ science, technology and engineering.
 ### Milestones
 - 2026, IDE Bootcamp Winner: Winner, Best Performing Team and Pitch Excellence Award for IonWatch.
 - 2026, SGU_HACKX 1.0: Second Position among 70 participating teams with GNSS Guardian, and a ₹11,000 cash prize.
-- 2026, Research Presentation: Presented research work at Avahan 2026.
+- 2026, Research Presentation: Presented my research paper, “Smart Hospitality: Leveraging Artificial Intelligence for Revenue and Yield Management Excellence”, at Avahan 2026, a national conference.
+
+See my certificates (link at the foot of Milestones): https://drive.google.com/drive/folders/1Q37zTbu3zsAgQHEJSoo-k8Fds0UGmAlw
 - 2025, Smart India Hackathon: National Finalist, Top 5 teams.
 - 2025, Startup Genesis: Second Position and a ₹5,000 cash prize.
 

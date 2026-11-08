@@ -258,9 +258,11 @@
   /* Folders stick once their own foot is on screen, so a folder taller than the
      window (a phone, a short laptop) is read to the end before the next one covers it. */
   const folders = $$('.folder');
+  const wide = matchMedia('(min-width: 1100px)');
   const stick = () => {
     const barH = $('.bar').offsetHeight;
-    folders.forEach((f) => { f.style.top = `${Math.min(barH, innerHeight - f.offsetHeight)}px`; });
+    // on desktop the tabs are the navigation, so every folder pins right under the bar
+    folders.forEach((f) => { f.style.top = `${wide.matches ? barH : Math.min(barH, innerHeight - f.offsetHeight)}px`; });
   };
   stick();
   addEventListener('resize', stick);

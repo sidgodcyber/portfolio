@@ -97,7 +97,7 @@ Credits sit in the footer under "Picture credits" and in `assets/found/credits.j
 | **Home** | From the mock: copy left, astronaut centre, Fig. window right, Moon rising across the foot. Nothing touches the headline. Below 1100px the astronaut and the Fig. window sit side by side under the copy. |
 | **About Me** | Poster left, letter centre, orbit drawing right. |
 | **Areas of Exploration** | The whole field turns to paper. Giant heading, filled bar rows. |
-| **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, seven of them, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. Each folder sticks once its own foot is on screen, so on a phone a tall folder is read to the end before the next one slides over it. |
+| **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, seven of them, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. On desktop every folder pins under the bar, so the tabs always show; each plate, the S4 scope included, fits one 16:10 frame so a folder fits a laptop window. Below 1100px a folder sticks once its own foot is on screen, so a tall folder is read to the end before the next one slides over it. |
 | **Milestones** | A printed sheet at a one-degree tilt. |
 | **Experience** | Text and Anatomy Mirror, then a small AgeWarp strip with its caption beside it, then three exhibits. |
 | **Résumé** | No section of its own: one link in the contact card, pointing at a fixed file, `assets/resume/Siddhi-Baluja-Resume.pdf`. |
