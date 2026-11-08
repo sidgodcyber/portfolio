@@ -255,6 +255,17 @@
   links.forEach((a) => a.addEventListener('click', () => setMenu(false)));
   addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
+  /* Folders stick once their own foot is on screen, so a folder taller than the
+     window (a phone, a short laptop) is read to the end before the next one covers it. */
+  const folders = $$('.folder');
+  const stick = () => {
+    const barH = $('.bar').offsetHeight;
+    folders.forEach((f) => { f.style.top = `${Math.min(barH, innerHeight - f.offsetHeight)}px`; });
+  };
+  stick();
+  addEventListener('resize', stick);
+  if ('ResizeObserver' in window) { const ro = new ResizeObserver(stick); folders.forEach((f) => ro.observe(f)); }
+
   /* Folder tabs: a stuck folder has no scroll position of its own, so work it out. */
   $$('.tab').forEach((tab) => tab.addEventListener('click', (e) => {
     const cab = $('#cabinet');

@@ -99,7 +99,7 @@ a:hover>.arrow{transform:translateX(5px)}
 h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-space:nowrap}
 .lede{max-width:33em;margin-top:24px;font-size:clamp(17px,1.4vw,20px);line-height:1.5}
 .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
-.astro{position:absolute;z-index:2;left:max(49%,calc(var(--t-display)*10.3 + 56px));top:clamp(8px,3vh,32px);width:min(30vw,60vh);cursor:grab;touch-action:none;will-change:transform}
+.astro{position:absolute;z-index:2;left:max(51%,calc(var(--t-display)*10.3 + 72px));top:clamp(24px,7vh,72px);width:min(23vw,46vh);cursor:grab;touch-action:none;will-change:transform}
 .astro:active{cursor:grabbing}
 .astro:focus-visible{outline-offset:-4px}
 .astro-float{position:relative;animation:float 9s ease-in-out infinite}
@@ -293,10 +293,12 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
   #siteNav a::before,#siteNav a::after{top:12px}
   .menu-btn{display:block;margin-left:auto}
   .win{display:none}
-  .fig{display:none}
+  .fig{position:relative;grid-column:7/13;grid-row:2;align-self:center;justify-self:end;right:auto;top:auto;width:min(100%,300px);margin-bottom:clamp(110px,22vw,200px)}
+  .fig-tabs{gap:6px}
+  .fig-tabs button{flex:1 1 0;width:auto;max-width:60px;height:40px}
   .hero{min-height:0;padding-bottom:0}
   .hero-copy{grid-column:1/-1}
-  .astro{position:relative;grid-column:1/-1;left:auto;top:auto;width:min(68%,520px);margin:16px auto clamp(120px,22vw,200px)}
+  .astro{position:relative;grid-column:1/7;grid-row:2;align-self:center;left:auto;top:auto;width:min(100%,340px);margin:24px 0 clamp(110px,22vw,200px)}
   .limb{min-width:0;width:170%;left:auto;right:-20%}
   .about{row-gap:48px}
   .about-copy{grid-column:1/-1;grid-row:1}
@@ -304,9 +306,8 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
   .orbits{grid-column:8/13;grid-row:2;width:min(100%,220px);justify-self:center;align-self:center}
   .folder-pic{grid-column:1/-1}
   .folder-text{grid-column:1/-1;order:-1;margin-bottom:24px}
-  .folder{position:static;margin-top:12px}
   .tabline{height:24px}
-  .tab{left:0;width:160px;padding:0;font-size:0;clip-path:polygon(0 100%,0 var(--c),var(--s) var(--c),var(--s) var(--s),var(--c) var(--s),var(--c) 0,calc(100% - 16px) 0,calc(100% - 16px) 8px,calc(100% - 8px) 8px,calc(100% - 8px) 16px,100% 16px,100% 100%)}
+  .tab{left:calc(var(--i)*(100% - 120px)/6);width:120px;padding:0;font-size:0;clip-path:polygon(0 100%,0 var(--c),var(--s) var(--c),var(--s) var(--s),var(--c) var(--s),var(--c) 0,calc(100% - 16px) 0,calc(100% - 16px) 8px,calc(100% - 8px) 8px,calc(100% - 8px) 16px,100% 16px,100% 100%)}
   .folder-body{min-height:0}
   .brief{aspect-ratio:auto}
   .exp-copy{grid-column:1/-1}
@@ -325,7 +326,10 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
   .hello{font-size:18px;margin-bottom:12px}
   .btn{font-size:18px;min-height:52px;padding:0 18px}
   .actions .btn{flex:1 1 auto;justify-content:center}
-  .astro{width:86%;margin-top:28px;margin-bottom:96px}
+  .astro{margin-top:20px;margin-bottom:96px}
+  .fig{margin-bottom:96px}
+  .fig-window{padding:8px 10px 6px}
+  .fig figcaption{font-size:12px}
   .limb{width:240%;right:-60%}
   .poster{grid-column:1/-1;aspect-ratio:4/5}
   .card-lead{font:500 var(--t-body)/1.5 var(--text)}
