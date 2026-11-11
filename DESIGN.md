@@ -90,19 +90,23 @@ Credits sit in the footer under "Picture credits" and in `assets/found/credits.j
 
 ---
 
-## 4. The page
+## 4. The pages
+
+Two pages, one terminal. **`index.html`** is the overview: it should be readable in one scroll, so every project gets one line and its result. **`projects.html`** holds the full write-up for each project ("What it is", "How it works", result, built with, links). Every homepage folder links to its section there.
+
 
 | Section | Composition |
 |---|---|
 | **Home** | From the mock: copy left, astronaut centre, Fig. window right, Moon rising across the foot. Nothing touches the headline. Below 1100px the astronaut and the Fig. window sit side by side under the copy. |
 | **About Me** | Poster left, letter centre, orbit drawing right. |
 | **Areas of Exploration** | The whole field turns to paper. Giant heading, filled bar rows. |
-| **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, seven of them, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. On desktop every folder pins under the bar, so the tabs always show; each plate, the S4 scope included, fits one 16:10 frame so a folder fits a laptop window. Below 1100px a folder sticks once its own foot is on screen, so a tall folder is read to the end before the next one slides over it. |
+| **Selected Projects** | The filing cabinet: full-bleed folders in alternating ink and paper, one per project, sticky, each sliding over the last. Tabs sit side by side, so earlier tabs stay visible as navigation. On desktop every folder pins under the bar, so the tabs always show; each plate, the S4 scope included, fits one 16:10 frame so a folder fits a laptop window. Below 1100px a folder sticks once its own foot is on screen, so a tall folder is read to the end before the next one slides over it. |
 | **Milestones** | A printed sheet at a one-degree tilt. |
 | **Experience** | Text and Anatomy Mirror, then a small AgeWarp strip with its caption beside it, then three exhibits. |
 | **Résumé** | No section of its own: one link in the contact card, pointing at a fixed file, `assets/resume/Siddhi-Baluja-Resume.pdf`. |
 | **Beyond Technology** | A note on paper with a tipped-in plate and a perforated foot. |
 | **Contact** | The largest type on the page, then the aurora clip with a visit card on it. |
+| **Projects page** | A title and a contact sheet of the project plates that jumps to each project, then one case file per project in alternating ink and paper bands. The picture is sticky on desktop and swaps sides each time; the text column holds the write-up. Below 1100px the text comes first and the picture follows. The same contact and footer close it. |
 | **Back of the card** | Paper footer revealed like a curtain as Contact lifts away. Sign-off, stamp, the name at full width, credits. |
 
 ---

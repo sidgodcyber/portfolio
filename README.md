@@ -1,11 +1,12 @@
 # Siddhi Baluja — Portfolio v3 · "The mission terminal"
 
-A one-page portfolio set as a working 1-bit computer. No frameworks, no build step, no dependencies.
+A portfolio set as a working 1-bit computer: an overview page and a projects page. No frameworks, no build step, no dependencies.
 
 ```
-index.html             the page; all the copy lives here
+index.html             the homepage: a short overview
+projects.html          the full write-up for every project
 css/styles.css         tokens and every component
-js/main.js             everything that moves
+js/main.js             everything that moves, shared by both pages
 assets/art/            the dithered pictures the page uses (generated)
 assets/found/          open-licence sources + credits.json
 assets/projects/       Siddhi's own exhibit shots and project figures

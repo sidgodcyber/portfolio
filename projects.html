@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects: Siddhi Baluja</title>
+  <meta name="description" content="Projects by Siddhi Baluja, from an ionospheric scintillation monitor to water ice at the lunar south pole.">
+  <meta name="theme-color" content="#0a0a09">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Siddhi Baluja: Research. Build. Create. Repeat.">
+  <meta property="og:description" content="A space-tech enthusiast, interdisciplinary researcher and builder turning curiosity into real-world solutions.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a09'/%3E%3Cpath d='M16 3l2.6 10.4L29 16l-10.4 2.6L16 29l-2.6-10.4L3 16l10.4-2.6z' fill='%23e6e1d7'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+<a class="skip" href="#ionwatch">Skip to content</a>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="bar">
+  <a class="brand" href="index.html" aria-label="Siddhi Baluja, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 1l2.4 12.6L31 16l-12.6 2.4L16 31l-2.4-12.6L1 16l12.6-2.4z"/></svg>
+    <span>Siddhi Baluja</span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteNav">Menu</button>
+  <nav id="siteNav" aria-label="Sections">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="projects.html" class="here" aria-current="page">Projects</a>
+    <a href="index.html#milestones">Milestones</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="win" role="group" aria-label="Window controls">
+    <button id="winMax" aria-label="Full screen"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v12H2zM4 4v8h8V4z" fill-rule="evenodd"/></svg></button>
+    <button id="winMin" aria-label="Freeze all motion" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 12h12v2H2z"/></svg></button>
+    <button id="winOff" aria-label="Switch the screen off"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h2v2h2v2h4V4h2V2h2v2h-2v2h-2v4h2v2h2v2h-2v-2h-2v-2H6v2H4v2H2v-2h2v-2h2V6H4V4H2z"/></svg></button>
+  </div>
+</header>
+
+<main>
+  <section class="phead" id="projects-top">
+    <h1>Projects</h1>
+    <nav class="jump" aria-label="Projects on this page">
+      <ol>
+        <li><a href="#ionwatch"><img src="assets/art/ionwatch.png" width="1440" height="900" alt=""><span>IonWatch</span></a></li>
+        <li><a href="#gnss"><img src="assets/art/gnss.png" width="1440" height="900" alt=""><span>GNSS Guardian</span></a></li>
+        <li><a href="#trishul"><img src="assets/art/trishul.png" width="1440" height="900" alt=""><span>Trishul Net</span></a></li>
+        <li><a href="#lunar"><img src="assets/art/lunar.png" width="1440" height="900" alt=""><span>Lunar Ice</span></a></li>
+        <li><a href="#sand"><img src="assets/art/sand.png" width="1440" height="900" alt=""><span>Sand Grain</span></a></li>
+        <li><a href="#gravity"><span class="tb" aria-hidden="true">&gt; brief_</span><span>Gravity</span></a></li>
+        <li><a href="#perihelion"><img src="assets/art/perihelion.png" width="1440" height="900" alt=""><span>Perihelion</span></a></li>
+      </ol>
+    </nav>
+  </section>
+
+  <article class="case tone" id="ionwatch">
+    <figure class="case-pic rv">
+      <img src="assets/art/ionwatch.png" width="1440" height="900" alt="An aurora curling over the Earth’s limb, seen from the International Space Station.">
+      <figcaption>An aurora over the Earth’s limb, seen from the ISS.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">IonWatch</h2>
+      <p class="cat rv">Space Technology · AI/ML · Research</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">An ionospheric scintillation monitoring system designed to provide insights into space weather disturbances. It grew into an incubated startup.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">A low-cost station, a NavIC/GNSS receiver on a Raspberry Pi, watches satellite signals as they pass through the ionosphere. It computes the S4 and phase scintillation indices, the standard measures of how much a signal flickers, through Solar Cycle 25. An offline pipeline turns recorded sessions into per-minute indices, fade events and plots.</p>
+      <dl class="rv">
+          <div><dt>Result</dt><dd>IDE Bootcamp 2026 (AICTE &amp; MoE’s Innovation Cell): Winner, Best Performing Team and Pitch Excellence Award</dd></div>
+          <div><dt>Built with</dt><dd>NavIC/GNSS receiver, Raspberry Pi, Python</dd></div>
+      </dl>
+        <a class="more" href="https://github.com/sidgodcyber/ionwatch" rel="noopener">IonWatch on GitHub <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="case paper flip" id="gnss">
+    <figure class="case-pic rv">
+      <img src="assets/art/gnss.png" width="1440" height="900" alt="Himalayan terrain from orbit, with feature points tracked across it by optical flow." loading="lazy">
+      <figcaption>Illustration: Himalayan terrain with tracked feature points.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">GNSS Guardian</h2>
+      <p class="cat rv">Autonomous Systems · Computer Vision · IoT</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">A GPS-denied drone navigation system that uses optical flow and visual terrain mapping to navigate when satellite signals become unreliable.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">A Raspberry Pi 4 edge module watches the health of every satellite signal: per-satellite signal-strength baselines, fix quality and sudden jumps in position, with a state machine that avoids false alarms. When it detects jamming or spoofing, it falls back to a downward camera to guide the drone home. Optical-flow odometry runs at 30 fps on the Pi, and a camera-versus-GNSS cross-check flags slow spoofs. On hardware, it detected jamming in about two seconds.</p>
+      <dl class="rv">
+          <div><dt>Result</dt><dd>SGU HackX 1.0 (SDGI Global University, Oct 2026): Second Position among 70 teams, ₹11,000 cash prize</dd></div>
+          <div><dt>Built with</dt><dd>Raspberry Pi 4, Quectel L86 GNSS, Pi Camera, Python; Shi–Tomasi and Lucas–Kanade tracking, ORB keyframes</dd></div>
+          <div><dt>Tested on</dt><dd>A handheld rig carrying the module</dd></div>
+      </dl>
+        <a class="more" href="https://github.com/sidgodcyber/gnss-guardian" rel="noopener">GNSS Guardian on GitHub <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="case tone" id="trishul">
+    <figure class="case-pic rv">
+      <img src="assets/art/trishul.png" width="1440" height="900" alt="A seismic trace of a debris flow swelling over fifty minutes, above the trigger signal it set off." loading="lazy">
+      <figcaption>A real debris flow at Illgraben, and the trigger it set off through a simulated sensor.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">Trishul Net</h2>
+      <p class="cat rv">Earth Sciences · Edge AI · IoT</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">A low-cost early-warning network for flash floods and debris flows in the side valleys of Uttarakhand.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">Cheap sensor nodes on stable ground beside a stream sample ground vibration at 200 Hz, filter it to 5–45 Hz, and run a trigger and a small on-device classifier. A gateway checks that at least two nodes agree, that the upstream node fired first and that the speed is plausible, which rules out earthquakes. It then estimates the arrival time and sounds the village siren locally, with no internet needed. The models are trained and tested on real public debris-flow recordings from Illgraben, Switzerland.</p>
+      <dl class="rv">
+          <div><dt>Status</dt><dd>Research prototype, not a certified warning system</dd></div>
+          <div><dt>Built with</dt><dd>ESP32-S3 sensor nodes and a gateway, Python</dd></div>
+      </dl>
+        <a class="more" href="https://github.com/sidgodcyber/trishul-net" rel="noopener">Trishul Net on GitHub <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="case paper flip" id="lunar">
+    <figure class="case-pic rv">
+      <img src="assets/art/lunar.png" width="1440" height="900" alt="A planned rover route across lunar south polar terrain into shadow, above three maps of radar, ice criteria and illumination." loading="lazy">
+      <figcaption>Planned rover traverse to crater F2, with radar, ice and illumination maps.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">Lunar South-Pole Ice Detection</h2>
+      <p class="cat rv">Space Technology · Geospatial · Research</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">Water-ice detection and mission planning for crater F2 near the lunar south pole, built for the Bharatiya Antariksh Hackathon 2026.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">A five-stage Python pipeline runs over about 50 GB of NASA LOLA topography (10 m per pixel) and ISRO Chandrayaan-2 DFSAR polarimetric radar. It maps permanently shadowed regions, models illumination, detects ice, picks a landing site and plans a rover traverse. Ice is inferred from the circular polarization ratio, after showing that backscatter inversion can’t tell lunar ice from regolith, and every stage checks itself against published ground truth.</p>
+      <dl class="rv">
+          <div><dt>Findings</dt><dd>Landing Site A at −87.87°S, 82.66°E: 29.3% annual illumination, 5.1° mean slope, 14.6 km from F2. A planned rover traverse of 15.7 km.</dd></div>
+          <div><dt>Built with</dt><dd>Python, rasterio, GDAL, NumPy, SciPy</dd></div>
+      </dl>
+        <a class="more" href="https://github.com/sidgodcyber/lunar-psr-ice-f2" rel="noopener">Lunar study on GitHub <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="case tone" id="sand">
+    <figure class="case-pic rv">
+      <img src="assets/art/sand.png" width="1440" height="900" alt="River sand grains laid out on black, each one marked by corner brackets." loading="lazy">
+      <figcaption>Illustration: river sand, grain by grain.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">Sand Grain Mapping System</h2>
+      <p class="cat rv">Computer Vision · Edge AI · Earth Sciences</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">A low-cost camera-based system for sand grain mapping and analysis, developed for the Smart India Hackathon 2025.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">A Raspberry Pi 5 with a Pi Camera photographs a sample, separates each grain with image processing, and measures the grains with statistical analysis. The whole system sits in a 3D-printed casing.</p>
+      <dl class="rv">
+          <div><dt>Result</dt><dd>Smart India Hackathon 2025: Top 5 Finalist nationwide, Ministry of Earth Sciences</dd></div>
+          <div><dt>Built with</dt><dd>Raspberry Pi 5, Pi Camera, 3D-printed casing</dd></div>
+      </dl>
+    </div>
+  </article>
+  <article class="case paper flip" id="gravity">
+    <figure class="case-pic rv">
+      <div class="brief" data-ui role="img" aria-label="An excerpt of a real morning brief from Gravity, with client names blacked out.">
+          <p class="b-head">Brief, Wednesday, July 08, 2026</p>
+          <p><b>Yesterday:</b> Built Exocortex phase 1: capture daemon, SQLite WAL/FTS5 state store, tiered LLM router, Telegram bot, encrypted sync.</p>
+          <p><b>Today:</b> Advance the ageing research and Scale of Life modifications. Search better alternatives for the SAM/FRAN re-ageing pipelines.</p>
+          <p><b>Tasks:</b> send <i class="x w6"></i> the July content calendar (due today) · email them (due tomorrow) · research their salon idea <i class="x w5"></i> (due Fri Jul 10)</p>
+        </div>
+      <figcaption>An excerpt of a real morning brief, client names blacked out.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">Gravity</h2>
+      <p class="cat rv">AI · Systems · Personal Tools</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">A personal assistant system that remembers my working day. It records what I do, sorts what I tell it into tasks, notes and client records, and writes me a morning brief.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">A Python system captures git, browser, window and clipboard activity into a portable SQLite brain, and turns natural-language Telegram messages into tasks, notes and client records. Code syncs across my two machines with encryption, while the research trail stays local, behind a firewall that strips out secrets. Search runs over full text and local embeddings, with local Whisper for speech and language models routed under a budget.</p>
+      <dl class="rv">
+          <div><dt>Built with</dt><dd>Python, SQLite, Telegram Bot API, local Whisper, NVIDIA, Gemini and Groq models</dd></div>
+      </dl>
+        <a class="more" href="https://github.com/sidgodcyber/gravity" rel="noopener">Gravity on GitHub <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="case tone" id="perihelion">
+    <figure class="case-pic rv">
+      <img src="assets/art/perihelion.png" width="1440" height="900" alt="Gameplay from Perihelion: a spacecraft flies through an asteroid field towards a ringed planet, with fuel and hull readouts on screen." loading="lazy">
+      <figcaption>The Halcyon Shear sector, on approach to Nadir-2.</figcaption>
+    </figure>
+    <div class="case-text">
+      <h2 class="rv">Perihelion: The Last Trajectory</h2>
+      <p class="cat rv">Web Game · 3D · Sci-Fi</p>
+      <h3 class="rv">What it is</h3>
+      <p class="rv">A cinematic space-survival game, built for a game jam on the theme LOOP.</p>
+      <h3 class="rv">How it works</h3>
+      <p class="rv">You fly the research spacecraft Kestrel through three hostile sectors, Kestrel Drift, Halcyon Shear and the Shard Belt, managing fuel, hull and engines as you weave through asteroid fields. Lost transmissions piece together what happened to the missions before you, and the signal you follow keeps repeating.</p>
+      <dl class="rv">
+          <div><dt>Status</dt><dd>Playable prototype, in the browser</dd></div>
+          <div><dt>Built with</dt><dd>HTML5, in 3D; graphics made with AI assistance</dd></div>
+      </dl>
+        <a class="more" href="https://sidgodcyber.itch.io/perihelion-the-last-trajectory" rel="noopener">Play it on itch.io <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+
+  <div class="curtain">
+    <!-- CONTACT -->
+    <section class="contact" id="contact" data-section="contact">
+      <h2 class="rv">Let’s build something<br>worth building.</h2>
+      <div class="visit">
+        <img class="clip-still" src="assets/art/clip-still.png" width="1440" height="720" alt="The aurora and city lights at night, seen from the International Space Station." loading="lazy">
+        <video id="clip" muted loop playsinline preload="none" poster="assets/art/clip-still.png" aria-label="The aurora and city lights at night, filmed from the International Space Station.">
+          <source src="assets/art/aurora-pass.webm" type="video/webm">
+        </video>
+        <canvas id="clipBits" width="360" height="180" aria-hidden="true"></canvas>
+        <div class="card">
+          <p class="card-lead">Have an interesting idea, research opportunity or collaboration in mind?</p>
+          <p>I’d love to hear about it.</p>
+          <ul>
+            <li><a href="https://github.com/sidgodcyber" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/siddhi-baluja-b248742b6/" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/sidddhiii._" rel="noopener">Instagram</a></li>
+            <li><a href="assets/resume/Siddhi-Baluja-Resume.pdf" download="Siddhi-Baluja-Resume.pdf">Résumé</a></li>
+          </ul>
+          <a class="btn dark" href="mailto:siddhibaluja06@gmail.com?subject=An%20idea%20worth%20building">Email Me <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="back">
+      <div class="back-top">
+        <div>
+          <p class="sign">Somewhere between curiosity and the unknown.</p>
+          <a class="mail" href="mailto:siddhibaluja06@gmail.com">siddhibaluja06@gmail.com</a>
+        </div>
+        <img class="stamp" src="assets/art/earthrise.png" width="960" height="1280" alt="Earth rising over the Moon, as a postage stamp." loading="lazy">
+      </div>
+      <p class="name" aria-hidden="true">Siddhi Baluja</p>
+      <details>
+        <summary>Picture credits</summary>
+        <ul class="credits">
+          <li><a href="https://commons.wikimedia.org/w/index.php?curid=15545487" rel="noopener">First Quarter</a>, NASA Goddard Space Flight Center, CC BY 2.0</li>
+          <li><a href="https://commons.wikimedia.org/w/index.php?curid=194634679" rel="noopener">Earthrise</a>, NASA Goddard Photo and Video, CC BY 2.0</li>
+          <li><a href="https://www.rawpixel.com/image/8718058/photo-image-clouds-space-public-domain" rel="noopener">Aurora Australis Observed</a>, NASA, CC0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Himalayas.jpg" rel="noopener">Himalayas</a>, NASA, public domain</li>
+          <li><a href="https://commons.wikimedia.org/w/index.php?curid=73250222" rel="noopener">River sand grains</a>, Alexander Klepnev, CC BY 4.0</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Aurora_Borealis_Pass_over_the_United_States_at_Night.ogv" rel="noopener">Aurora Borealis Pass over the United States at Night</a>, ISS Expedition 29 crew, public domain</li>
+          <li>Lunar maps and the Trishul Net trace come from Siddhi’s own studies of NASA LOLA, ISRO Chandrayaan-2 and Illgraben seismic data.</li>
+          <li>Pictures are dithered to one bit. Departure Mono by Helena Zhang and IBM Plex Mono by IBM, SIL Open Font License.</li>
+        </ul>
+      </details>
+      <p class="imprint">© 2026 Siddhi Baluja</p>
+    </footer>
+  </div>
+</main>
+
+<div class="crt" id="crt" hidden>
+  <button class="btn" id="crtOn">Switch back on</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

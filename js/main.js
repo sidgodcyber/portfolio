@@ -1,4 +1,5 @@
-/* main.js — everything that moves. No libraries; the page reads fine without it. */
+/* main.js — everything that moves, on both pages. No libraries; the pages read fine without it.
+   Homepage-only pieces (astronaut, S4 scope, folders) start only when their markup is there. */
 (() => {
   'use strict';
   document.documentElement.classList.add('js');
@@ -95,6 +96,7 @@
   const astro = $('#astro');
   let ax = 0, ay = 0, avx = 0, avy = 0, ar = 0, held = false, px0 = 0, py0 = 0;
   function stepAstro() {
+    if (!astro) return;
     if (!held) {
       avx += -ax * 0.006; avy += -ay * 0.006;
       avx *= 0.965; avy *= 0.965;
@@ -104,27 +106,29 @@
     ar = ax * 0.02;
     astro.style.transform = `translate3d(${ax.toFixed(1)}px,${(ay + parallax).toFixed(1)}px,0) rotate(${ar.toFixed(2)}deg)`;
   }
-  astro.addEventListener('pointerdown', (e) => {
-    held = true; px0 = e.clientX; py0 = e.clientY;
-    astro.classList.add('held');
-    astro.setPointerCapture(e.pointerId);
-  });
-  astro.addEventListener('pointermove', (e) => {
-    if (!held) return;
-    const dx = e.clientX - px0, dy = e.clientY - py0;
-    px0 = e.clientX; py0 = e.clientY;
-    ax += dx; ay += dy; avx = dx * 0.6; avy = dy * 0.6;
-    if (!moving()) stepAstro();
-  });
-  const release = () => { held = false; astro.classList.remove('held'); };
-  astro.addEventListener('pointerup', release);
-  astro.addEventListener('pointercancel', release);
-  astro.addEventListener('keydown', (e) => {
-    const k = { ArrowLeft: [-9, 0], ArrowRight: [9, 0], ArrowUp: [0, -9], ArrowDown: [0, 9] }[e.key];
-    if (!k) return;
-    e.preventDefault();
-    avx += k[0]; avy += k[1];
-  });
+  if (astro) {
+    astro.addEventListener('pointerdown', (e) => {
+      held = true; px0 = e.clientX; py0 = e.clientY;
+      astro.classList.add('held');
+      astro.setPointerCapture(e.pointerId);
+    });
+    astro.addEventListener('pointermove', (e) => {
+      if (!held) return;
+      const dx = e.clientX - px0, dy = e.clientY - py0;
+      px0 = e.clientX; py0 = e.clientY;
+      ax += dx; ay += dy; avx = dx * 0.6; avy = dy * 0.6;
+      if (!moving()) stepAstro();
+    });
+    const release = () => { held = false; astro.classList.remove('held'); };
+    astro.addEventListener('pointerup', release);
+    astro.addEventListener('pointercancel', release);
+    astro.addEventListener('keydown', (e) => {
+      const k = { ArrowLeft: [-9, 0], ArrowRight: [9, 0], ArrowUp: [0, -9], ArrowDown: [0, 9] }[e.key];
+      if (!k) return;
+      e.preventDefault();
+      avx += k[0]; avy += k[1];
+    });
+  }
 
   /* ── Fig. window: three angles on one black hole ────────── */
   const figImgs = $$('.fig-stack img');
@@ -141,8 +145,8 @@
    * taken over the samples actually on screen.                 */
   const trace = $('#s4Trace');
   const range = $('#s4Range');
-  const tctx = trace.getContext('2d');
-  const N = trace.width, TH = trace.height;
+  const tctx = trace ? trace.getContext('2d') : null;
+  const N = trace ? trace.width : 0, TH = trace ? trace.height : 0;
   const samples = new Float32Array(N);
   let gx = 0, gy = 0, head = 0, sinceRead = 0, scopeSeen = false;
   const gauss = () => Math.sqrt(-2 * Math.log(Math.random() + 1e-9)) * Math.cos(6.283 * Math.random());
@@ -174,21 +178,21 @@
       if (i % 2 === 0) tctx.fillRect(i, TH - h + 2, 1, h);
     }
   }
-  function primeScope() { for (let i = 0; i < N; i += 1) nextSample(); drawTrace(); readS4(); }
+  function primeScope() { if (!trace) return; for (let i = 0; i < N; i += 1) nextSample(); drawTrace(); readS4(); }
   function stepScope() {
-    if (!scopeSeen) return;
+    if (!trace || !scopeSeen) return;
     nextSample(); nextSample();
     drawTrace();
     if ((sinceRead += 1) > 7) { sinceRead = 0; readS4(); }
   }
-  range.addEventListener('input', primeScope);
+  if (range) range.addEventListener('input', primeScope);
 
   /* ── Footage, redrawn in one bit ────────────────────────── */
   const clip = $('#clip');
   const bitsCanvas = $('#clipBits');
   const visit = $('.visit');
-  const bctx = bitsCanvas.getContext('2d', { willReadFrequently: true });
-  const BW = bitsCanvas.width, BH = bitsCanvas.height;
+  const bctx = bitsCanvas ? bitsCanvas.getContext('2d', { willReadFrequently: true }) : null;
+  const BW = bitsCanvas ? bitsCanvas.width : 0, BH = bitsCanvas ? bitsCanvas.height : 0;
   const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map((v) => (v + 0.5) * 16);
   let clipRunning = false;
   function drawClip() {
@@ -208,7 +212,7 @@
     bctx.putImageData(f, 0, 0);
     visit.classList.add('bits');
   }
-  new IntersectionObserver(([e]) => {
+  if (visit) new IntersectionObserver(([e]) => {
     const go = e.isIntersecting && moving();
     if (go) { clip.play().catch(() => {}); clipRunning = true; }
     else { clip.pause(); clipRunning = false; }
@@ -293,6 +297,7 @@
     document.body.classList.toggle('still', frozen);
     winMin.setAttribute('aria-pressed', String(frozen));
     winMin.setAttribute('aria-label', frozen ? 'Resume motion' : 'Freeze all motion');
+    if (!visit) return;
     if (frozen) { clip.pause(); clipRunning = false; } else if (visit.getBoundingClientRect().top < innerHeight) { clip.play().catch(() => {}); clipRunning = true; }
   });
   const crt = $('#crt');

@@ -173,6 +173,7 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 .folder-text h3{font-size:var(--t-head);line-height:1.05}
 .cat{margin-top:12px;font-size:var(--t-small);line-height:1.4}
 .folder-text>p:not(.cat){margin-top:24px}
+.folder-text .more{margin-right:24px}
 .folder-text dl{margin-top:24px}
 .folder-text dl div+div{margin-top:12px}
 .folder-text dt{font-family:var(--pixel);font-size:var(--t-small)}
@@ -182,6 +183,9 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 /* Gravity's artefact: a real brief, set as what it is */
 .brief{aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:clamp(20px,3.4vw,48px);background:var(--ground);color:var(--bone);font-size:var(--t-body);line-height:1.5}
 .b-head{font:400 var(--t-sub)/1.2 var(--pixel)}
+.folder .brief{gap:24px;font:400 var(--t-sub)/1.4 var(--pixel)}
+.folder .brief b{font-weight:400}
+.folder .b-head{font-size:var(--t-head)}
 .brief b{font-weight:500}
 .brief .x{display:inline-block;height:.95em;vertical-align:-.1em;background:var(--bone)}
 .brief .w5{width:5ch}.brief .w6{width:6ch}
@@ -209,6 +213,33 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 .s4 output span{font-size:var(--t-small)}
 .s4 p{grid-column:1/3;font-size:var(--t-small);line-height:1.35}
 
+/* ── Projects page: the case files ───────────────────────── */
+.phead{padding:clamp(48px,10vh,120px) var(--m) clamp(56px,8vw,112px)}
+.phead h1{font-size:var(--t-display);text-transform:uppercase}
+.phead .lede{max-width:34em;margin-top:20px;font-size:clamp(18px,1.6vw,22px);line-height:1.45}
+.jump ol{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;margin-top:clamp(32px,5vw,56px);list-style:none;padding:0}
+.jump a{display:block;text-decoration:none}
+.jump img,.jump .tb{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--ground);transition:transform .16s steps(3)}
+.jump .tb{display:grid;place-items:center;font:400 var(--t-sub)/1 var(--pixel);color:var(--bone);background:var(--tone-2)}
+.jump a span:last-child{display:block;margin-top:10px;font:400 var(--t-small)/1.2 var(--pixel)}
+.jump a:hover img,.jump a:hover .tb,.jump a:focus-visible img{transform:translateY(-4px)}
+.case{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:16px;align-items:start;padding:clamp(56px,8vw,120px) var(--m)}
+.case.tone{background:var(--tone-2)}
+.case.paper{background:var(--bone);color:var(--ground)}
+.case-pic{grid-column:1/7;grid-row:1;position:sticky;top:calc(var(--bar) + 24px)}
+.case-pic img,.case-pic .brief{width:100%;aspect-ratio:16/10;object-fit:cover}
+.case-pic figcaption{margin-top:10px;font-size:var(--t-small)}
+.case-text{grid-column:8/13;grid-row:1}
+.case.flip .case-pic{grid-column:7/13}
+.case.flip .case-text{grid-column:1/6}
+.case-text h2{font-size:var(--t-head);line-height:1.05}
+.case-text h3{margin:28px 0 8px;font-size:var(--t-sub);line-height:1.2}
+.case-text dl{margin-top:28px}
+.case-text dl div+div{margin-top:12px}
+.case-text dt{font-family:var(--pixel);font-size:var(--t-small)}
+.case-text dd{font-size:var(--t-small);line-height:1.5}
+.case-text .more{margin-right:24px}
+
 /* ── Milestones: the printed list ────────────────────────── */
 .milestones{padding:var(--gap) var(--m) 0}
 .sheet{max-width:980px;margin:0 auto;padding:clamp(28px,5vw,64px);background:var(--bone);color:var(--ground);transform:rotate(-1deg);clip-path:var(--steps)}
@@ -216,7 +247,7 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 .sheet li{display:grid;grid-template-columns:5em minmax(0,1fr);gap:16px;padding:16px 0}
 .sheet time{font:400 var(--t-sub)/1.25 var(--pixel);font-variant-numeric:tabular-nums}
 .sheet h3{font-size:var(--t-sub);line-height:1.25}
-.sheet li p{margin-top:2px}
+.sheet li p{margin-top:2px;max-width:62ch}
 .sheet .certs{margin-top:24px}
 
 /* ── Experience ──────────────────────────────────────────── */
@@ -230,7 +261,7 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 /* AgeWarp stays a small detail, its caption beside it */
 .exhibit.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:center}
 .exhibit.wide .swap{aspect-ratio:1352/256}
-.exhibit.wide figcaption{margin-top:0}
+.exhibit.wide figcaption{margin-top:0;max-width:60ch}
 .swap{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--tone)}
 .swap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .swap .real{opacity:0;transition:opacity .28s steps(5)}
@@ -250,7 +281,7 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 /* ── Contact + the back of the card (curtain) ────────────── */
 .curtain{position:relative}
 .contact{position:relative;z-index:2;background:var(--ground);padding-top:clamp(32px,6vw,80px)}
-.contact h2{padding:0 var(--m);font-size:var(--t-giant);line-height:1.04;text-transform:uppercase;white-space:nowrap}
+.contact h2{padding:0 var(--m);font-size:min(110px,calc((100vw - 2*var(--m))/13.8));line-height:1.04;text-transform:uppercase;white-space:nowrap}
 .visit{position:relative;margin-top:clamp(32px,4vw,56px);height:min(92svh,820px);overflow:hidden;background:var(--ground)}
 .visit video,.visit canvas,.clip-still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
 .visit video{opacity:0}
@@ -273,7 +304,7 @@ h1{font-size:var(--t-display);line-height:1.06;text-transform:uppercase;white-sp
 .name{margin:clamp(24px,4vw,56px) 0 clamp(16px,2vw,28px);font:400 min(176px,calc((100vw - 2*var(--m))/8.4))/.96 var(--pixel);text-transform:uppercase;white-space:nowrap}
 details{font-size:var(--t-small)}
 summary{min-height:44px;display:inline-flex;align-items:center;cursor:pointer;font-weight:500}
-.credits{display:grid;gap:4px;padding-bottom:16px;max-width:90ch}
+.credits{display:grid;gap:4px;padding-bottom:16px;max-width:68ch}
 .credits a{text-underline-offset:3px}
 .imprint{font-size:var(--t-small)}
 
@@ -313,6 +344,9 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
   .poster{grid-column:1/7;grid-row:2}
   .orbits{grid-column:8/13;grid-row:2;width:min(100%,220px);justify-self:center;align-self:center}
   .folder-pic{grid-column:1/-1}
+  .case-text,.case.flip .case-text{grid-column:1/-1;grid-row:1}
+  .jump ol{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .case-pic,.case.flip .case-pic{grid-column:1/-1;grid-row:2;position:static;margin-top:32px}
   .folder-text{grid-column:1/-1;order:-1;margin-bottom:24px}
   .tabline{height:24px}
   .tab{left:calc(var(--i)*(100% - 120px)/6);width:120px;padding:0;font-size:0;clip-path:polygon(0 100%,0 var(--c),var(--s) var(--c),var(--s) var(--s),var(--c) var(--s),var(--c) 0,calc(100% - 16px) 0,calc(100% - 16px) 8px,calc(100% - 8px) 8px,calc(100% - 8px) 16px,100% 16px,100% 100%)}
@@ -341,6 +375,9 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
   .limb{width:240%;right:-60%}
   .poster{grid-column:1/-1;aspect-ratio:4/5}
   .card-lead{font:500 var(--t-body)/1.5 var(--text)}
+  .jump ol{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .folder .b-head{font-size:var(--t-sub)}
+  .folder .brief{font-size:var(--t-body)}
   .card{padding:24px}
   .card ul{display:grid;grid-template-columns:1fr 1fr}
   .poster p{font-size:20px}
